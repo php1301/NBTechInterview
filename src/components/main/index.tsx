@@ -4,7 +4,7 @@ import { Button } from "@components";
 import { useUser } from "@auth0/nextjs-auth0";
 
 export const Main: React.FC = () => {
-    const { user, error, isLoading } = useUser();
+    const { user, isLoading } = useUser();
 
     // you can use the error and loading state to show an error message or a loading spinner while loading.
     if (isLoading) {
@@ -29,7 +29,7 @@ export const Main: React.FC = () => {
                     data-test="main-heading"
                     className="text-white text-8xl mb-2"
                 >
-                    Nimble Tech Interview For {user?.email || ''}
+                    Nimble Tech Interview For {user?.email || ""}
                 </h1>
                 <p className="text-lg text-white mb-3">
                     Technical Test for Nimble
