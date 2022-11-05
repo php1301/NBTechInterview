@@ -1,6 +1,5 @@
 # nb-tech-interview
 
-
 ## Available Scripts
 
 ### Running the development server.
