@@ -29,7 +29,7 @@ export const Main: React.FC = () => {
                     data-test="main-heading"
                     className="text-white text-8xl mb-2"
                 >
-                    Nimble Tech Interview For {user?.email || ''}
+                    Nimble Tech Interview For {user?.email || ""}
                 </h1>
                 <p className="text-lg text-white mb-3">
                     Technical Test for Nimble
