@@ -4,7 +4,7 @@ import { Button } from "@components";
 import { useUser } from "@auth0/nextjs-auth0";
 
 export const Main: React.FC = () => {
-    const { user, error, isLoading } = useUser();
+    const { user, isLoading } = useUser();
 
     // you can use the error and loading state to show an error message or a loading spinner while loading.
     if (isLoading) {
