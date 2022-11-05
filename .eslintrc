@@ -18,8 +18,22 @@
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "prettier/@typescript-eslint",
         "plugin:prettier/recommended"
-    ]
+    ],
+    "rules": {
+        "no-unused-vars": 0,
+        "@typescript-eslint/no-unused-vars": [
+            2,
+            {
+                "args": "none",
+                "ignoreRestSiblings": true
+            }
+        ],
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ]
+    }
 }
