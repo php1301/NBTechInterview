@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Button } from "@components";
+import { Button, Header } from "@components";
 import { useUser } from "@auth0/nextjs-auth0";
 
 export const Main: React.FC = () => {
@@ -24,14 +24,15 @@ export const Main: React.FC = () => {
     // }
     return (
         <div className="text-center font-light py-5 bg-gray-700">
+            <Header />
             <div className="container mx-auto">
                 <h1
                     data-test="main-heading"
                     className="text-white text-8xl mb-2"
                 >
-                    Nimble Tech Interview For {user?.email || ""}
+                    Nimble Tech Interview {user?.email || ""}
                 </h1>
-                <p className="text-lg text-white mb-3">
+                <p className="text-lg text-white mb-3 py-4">
                     Technical Test for Nimble
                 </p>
                 <Button type="button">
@@ -43,6 +44,20 @@ export const Main: React.FC = () => {
                         Docs
                     </a>
                 </Button>
+                {!user && (
+                    <Button type="button">
+                        <a data-test="docs-btn-login" href="/api/auth/login">
+                            Login
+                        </a>
+                    </Button>
+                )}
+                {user && (
+                    <Button type="button">
+                        <a data-test="docs-btn-application" href="/search">
+                            Application
+                        </a>
+                    </Button>
+                )}
             </div>
         </div>
     );
