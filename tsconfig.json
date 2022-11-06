@@ -20,6 +20,8 @@
         "paths": {
             "@components/*": ["src/components/*"],
             "@components": ["src/components"],
+            "@libs/*": ["src/libs/*"],
+            "@comlibsponents": ["src/libs"],
             "@public/*": ["public/*"],
             "@public": ["public"],
             "@styles/*": ["src/styles/*"],
