@@ -1,5 +1,5 @@
 export interface SearchInputType {
-    keyword: string;
+    keywords: File;
 }
 export interface SearchResponseType {
     id: number;
