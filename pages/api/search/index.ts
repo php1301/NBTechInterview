@@ -15,7 +15,7 @@ export default async (req, res) => {
             console.log(err, res);
             conn.end();
         });
-    } catch (error) {
-        console.log(error);
+    } catch (e) {
+        console.log(e);
     }
 };
