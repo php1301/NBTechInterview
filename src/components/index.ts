@@ -6,3 +6,4 @@ export { Cards } from "./cards";
 export { Footer } from "./footer";
 export { Container } from "./container";
 export { Search } from "./search";
+export { Table } from "./table";
