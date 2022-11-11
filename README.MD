@@ -48,7 +48,7 @@ Leveraged the NextJS api routes mostly and serverless with lambda
 + Request's time
 ![image](https://user-images.githubusercontent.com/40063990/201316045-d065fdd0-62a1-48c1-8800-56c851014528.png)
 + Database
-![image](https://user-images.githubusercontent.com/40063990/201316178-effacdb6-12e8-4ae8-be43-4e27376deaaf.png)
+![image](https://user-images.githubusercontent.com/40063990/201320319-d2447540-1a91-435f-a208-05e5b2b146fc.png)
 + Searching keyword
 ![image](https://user-images.githubusercontent.com/40063990/201316445-3f9d2b72-bfa7-4c52-9722-0f6016270b03.png)
 
