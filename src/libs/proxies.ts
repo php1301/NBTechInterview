@@ -22,7 +22,11 @@ export const getProxies = async () => {
 
         const random_number = Math.floor(Math.random() * 100);
         const proxy = `http://${ip_addresses[random_number]}:${port_numbers[random_number]}`;
-        return proxy;
+        return {
+            ip: ip_addresses[random_number],
+            port: port_numbers[random_number],
+            proxy,
+        };
     } catch (e) {
         console.log("Error loading proxy, please try again", e);
     }

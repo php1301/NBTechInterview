@@ -4,10 +4,9 @@ import axios from "axios";
 import { useForm } from "react-hook-form";
 import Papa from "papaparse";
 
-import { SearchInputType } from "src/types/search";
+import { SearchInputType, SearchResponseType } from "src/types/search";
 import { UserProfile } from "@auth0/nextjs-auth0";
 import { Button } from "@components/button";
-import { MOCK_RESULT } from "src/constants";
 
 interface SearchComponentProps {
     user: UserProfile | undefined;
@@ -47,9 +46,10 @@ export const Search: React.FC<SearchComponentProps> = ({
                         keywords: csv?.data?.slice(0, -1),
                     },
                 });
-                // const results = MOCK_RESULT;
-                console.log(results);
-                setResult(results?.data?.results);
+                const finalizedResult: SearchResponseType =
+                    results?.data?.results;
+                console.log(finalizedResult);
+                setResult(finalizedResult);
             };
 
             reader.readAsText(keywords[0]);

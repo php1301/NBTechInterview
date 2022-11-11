@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { useTable } from "react-table";
 
 interface TableComponentProps {
-    columns: { Header: string; accessor: string }[];
+    columns: { Header: any; accessor?: string }[];
     data: any;
     className?: string;
 }
@@ -59,7 +59,10 @@ export const Table: React.FC<TableComponentProps> = ({
                                                     className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap"
                                                     {...cell.getCellProps()}
                                                 >
-                                                    {cell.render("Cell")}
+                                                    {cell.column.id ===
+                                                    "rowNumber"
+                                                        ? i + 1
+                                                        : cell.render("Cell")}
                                                 </td>
                                             );
                                         })
