@@ -58,6 +58,16 @@ export const Main: React.FC = () => {
                         </a>
                     </Button>
                 )}
+                {user && (
+                    <Button type="button">
+                        <a
+                            data-test="docs-btn-application-keyword"
+                            href="/my-keywords"
+                        >
+                            Your Keywords
+                        </a>
+                    </Button>
+                )}
             </div>
         </div>
     );

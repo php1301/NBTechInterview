@@ -3,9 +3,14 @@ export interface SearchInputType {
 }
 export interface SearchResponseType {
     id: number;
-    keyword_name: string;
-    total_adwords: number;
-    total_links: number;
-    total_search_results: number;
-    html_code: string;
+    keyword: string;
+    totalAds: number;
+    totalLinks: number;
+    totalResults: number;
+    htmlLink: string;
+    searchTime: string;
+}
+
+export interface UserUploadSearchInputType {
+    keyword: string;
 }

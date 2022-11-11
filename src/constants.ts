@@ -1,11 +1,19 @@
 export const COLUMNS = [
     {
+        Header: () => `Row #`,
+        id: "rowNumber",
+    },
+    {
         Header: "List of keywords",
         accessor: "keywords",
     },
 ];
 
 export const RESULT_COLUMNS = [
+    {
+        Header: () => `Row #`,
+        id: "rowNumber",
+    },
     {
         Header: "Keyword",
         accessor: "keyword",
@@ -36,6 +44,32 @@ export const RESULT_COLUMNS = [
     },
 ];
 
+export const USER_COLUMNS = [
+    {
+        Header: () => `Row #`,
+        id: "rowNumber",
+    },
+    {
+        Header: "Keyword",
+        accessor: "keyword_name",
+    },
+    {
+        Header: "HTML/Cache Code Link",
+        accessor: "html_code",
+    },
+    {
+        Header: "Total Results",
+        accessor: "total_search_results",
+    },
+    {
+        Header: "Total Ads",
+        accessor: "total_adwords",
+    },
+    {
+        Header: "Total Links",
+        accessor: "total_links",
+    },
+];
 export const MOCK_RESULT = {
     data: {
         results: [
@@ -182,6 +216,78 @@ export const MOCK_PAYLOAD = {
         },
         {
             keywords: "facebook",
+        },
+    ],
+};
+
+export const MOCK_RESULT_LAMBDA = {
+    results: [
+        {
+            keyword: "a",
+            htmlLink: "http://jsonblob.com/api/jsonBlob/1040488255933661184",
+            totalResults: "25,270,000,000",
+            totalAds: "2",
+            searchTime: "0.69 seconds",
+            links: [
+                "https://en.wikipedia.org/wiki/A",
+                "https://en.wiktionary.org/wiki/a",
+                "https://www.dictionary.com/browse/a",
+                "https://www.merriam-webster.com/dictionary/a",
+                "https://www.macmillandictionary.com/us/dictionary/american/a_1",
+                "https://twitter.com/a",
+            ],
+            totalLinks: 6,
+            searchedLink: "https://www.google.com/search?q=a&hl=en&gl=us",
+        },
+        {
+            keyword: "b",
+            htmlLink: "http://jsonblob.com/api/jsonBlob/1040488304872800256",
+            totalResults: "25,270,000,000",
+            totalAds: "2",
+            searchTime: "0.43 seconds",
+            links: [
+                "https://www.bcorporation.net/",
+                "https://www.instagram.com/iamcardib/?hl=en",
+                "https://en.wikipedia.org/wiki/B",
+                "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b",
+                "https://en.wiktionary.org/wiki/b",
+            ],
+            totalLinks: 5,
+            searchedLink: "https://www.google.com/search?q=b&hl=en&gl=us",
+        },
+        {
+            keyword: "c",
+            htmlLink: "http://jsonblob.com/api/jsonBlob/1040488349894459392",
+            totalAds: "2",
+            searchTime: "0.2s",
+            links: [],
+            totalLinks: "1",
+            searchedLink: "https://www.google.com/search?q=c&hl=en&gl=us",
+        },
+        {
+            keyword: "d",
+            htmlLink: "http://jsonblob.com/api/jsonBlob/1040488379116175360",
+            totalAds: "2",
+            searchTime: "0.2s",
+            links: [],
+            totalLinks: "1",
+            searchedLink: "https://www.google.com/search?q=d&hl=en&gl=us",
+        },
+        {
+            keyword: "e",
+            htmlLink: "http://jsonblob.com/api/jsonBlob/1040488417338867712",
+            totalResults: "25,270,000,000",
+            totalAds: "2",
+            searchTime: "0.54 seconds",
+            links: [
+                "https://www.eonline.com/",
+                "https://www.nbc.com/networks/e",
+                "https://en.wikipedia.org/wiki/E",
+                "https://www.youtube.com/user/enews",
+                "https://www.youtube.com/channel/UCj7V_ikJOXO9RC8at6kYfHQ",
+            ],
+            totalLinks: 5,
+            searchedLink: "https://www.google.com/search?q=e&hl=en&gl=us",
         },
     ],
 };

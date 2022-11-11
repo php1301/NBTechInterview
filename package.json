@@ -16,6 +16,7 @@
     "dependencies": {
         "@auth0/nextjs-auth0": "^1.9.2",
         "axios": "^0.21.1",
+        "axios-retry": "^3.3.1",
         "cheerio": "^1.0.0-rc.12",
         "cross-blob": "^3.0.2",
         "next": "^12.1.6",
@@ -32,6 +33,7 @@
         "react-use": "^15.3.8",
         "request": "^2.88.2",
         "sass": "^1.32.5",
+        "tor-axios": "^1.0.11",
         "zustand": "^3.5.7"
     },
     "devDependencies": {
