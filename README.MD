@@ -13,6 +13,7 @@
 Leveraged the NextJS api routes mostly and serverless with lambda
 
 + For uploading - POST /api/search - integrated with Lambda behind the scence
++ Lambda Logic Repository: https://github.com/php1301/lambda-google
 + For the sake of quick developement - leveraged the `serverless` framework with free tier AWS account
 + Searching in Database - POST /api/user-search
 
