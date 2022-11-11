@@ -31,7 +31,7 @@ Leveraged the NextJS api routes mostly and serverless with lambda
 + Overview of ER Diagram for database: ![image](https://user-images.githubusercontent.com/40063990/201313968-adf2b78c-02bc-4fc7-b66a-2e47927e0e61.png)
 + ⛔⛔ The 429 Too Many Requests - it's all about tricking Google to not blocking our request
 + Request factor: Can come from UserAgent, Remote address, IP, Header, Cookies, Fingerprint, Headless Browser, Request random delay...
-+ Most viable and easiest approachments are all about rotating those above: mostly are **UserAgent** and **IP address with Paid Proxy (Costly) or setup our own Proxy server(tor) SOCKS** -> this would lead to the optional requirment - deploying on Cloud Provider
++ Most viable and easiest approachments are all about rotating those above: mostly are **UserAgent** and **IP address with Paid Proxy (Costly) or setup our own Proxy server(tor) SOCKS** -> this would lead to the optional requirement - deploying on Cloud Provider
 + => **Cost Optimization, Fast**, Headless like Puppeteer is not optimized, Premium proxy maybe is too overkill for this technical assignment
 + => ✅✅✅ Lambda Free Tier Approachment is suitable for this workload -> over freetier can consider about EventBridge for CronJob Daily scraping and Thanks To AWS generous IP pool
 + => Rotating Lambda IP -> **Best trick here, we update lambda configuration like Environment** ![image](https://user-images.githubusercontent.com/40063990/201315284-0407defc-8612-445f-aa79-a9e4043fe472.png)
@@ -61,7 +61,7 @@ Leveraged the NextJS api routes mostly and serverless with lambda
   + keyword searching in database: '/my-keywords'
   + Upload csv of keywords: '/search'
 + Create Database with SQL script
-+ keywords.csv in mocks folder
++ keywords.csv in src/mocks folder
 ## Available Scripts
 
 ### Running the development server.
