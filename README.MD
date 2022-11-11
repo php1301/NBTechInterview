@@ -52,7 +52,7 @@ Leveraged the NextJS api routes mostly and serverless with lambda
 + Searching keyword
 ![image](https://user-images.githubusercontent.com/40063990/201316445-3f9d2b72-bfa7-4c52-9722-0f6016270b03.png)
 
-## 6. Limitation
+## 6. Limitations
 + Due to the time limit, the source code maybe not on its best practice (Working on It by actively pushing commit)
 ## 7. Reproduction
 + run `yarn` and add necessary env variables in `.example.env`
