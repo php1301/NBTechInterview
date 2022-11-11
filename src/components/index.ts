@@ -5,3 +5,6 @@ export { Button } from "./button";
 export { Cards } from "./cards";
 export { Footer } from "./footer";
 export { Container } from "./container";
+export { Search } from "./search";
+export { KeywordSearch } from "./search/keyword-search";
+export { Table } from "./table";
