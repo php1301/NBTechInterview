@@ -2,12 +2,12 @@
 # Tech Interview Checklist and Approachement
 
 ## 1. WebUI
-+ [ ] Sign in - ✅ WITH AUTH0
-+ [ ] Sign up - ✅ WITH AUTH0
-+ [ ] Upload a keyword file - ✅ DONE WITH PAPAPARSE
-+ [ ] View list of keywords - ✅ REACT-TABLE
-+ [ ] View the search result information for each keyword - ✅ SHOW WITH REACT-TABLE, htmlCode were embedded into a jsonblob link via their APIs
-+ [ ] Search across all reports - ✅ DATABASE ACTION WITH `pg`
++ [x] Sign in - ✅ WITH AUTH0
++ [x] Sign up - ✅ WITH AUTH0
++ [x] Upload a keyword file - ✅ DONE WITH PAPAPARSE
++ [x] View list of keywords - ✅ REACT-TABLE
++ [x] View the search result information for each keyword - ✅ SHOW WITH REACT-TABLE, htmlCode were embedded into a jsonblob link via their APIs
++ [x] Search across all reports - ✅ DATABASE ACTION WITH `pg`
 
 ## 2. API
 Leveraged the NextJS api routes mostly and serverless with lambda
