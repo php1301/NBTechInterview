@@ -32,11 +32,11 @@ Leveraged the NextJS api routes mostly and serverless with lambda
 + ⛔⛔ The 429 Too Many Requests - it's all about tricking Google to not blocking our request
 + Request factor: Can come from UserAgent, Remote address, IP, Header, Cookies, Fingerprint, Headless Browser, Request random delay...
 + Most viable and easiest approachments are all about rotating those above: mostly are **UserAgent** and **IP address with Paid Proxy (Costly) or setup our own Proxy server(tor) SOCKS** -> this would lead to the optional requirment - deploying on Cloud Provider
-=> **Cost Optimization, Fast**, Headless like Puppeteer is not optimized, Premium proxy maybe is too overkill for this technical assignment
-=> Lambda Free Tier Approachment is suitable for this workload -> over freetier can consider about EventBridge for CronJob Daily scraping and Thanks To AWS generous IP pool
-=> Rotating Lambda IP -> **Best trick here, we update lambda configuration like Environment** ![image](https://user-images.githubusercontent.com/40063990/201315284-0407defc-8612-445f-aa79-a9e4043fe472.png)
-=> **not guaranteed** 100% percent all the time (approx 80-90% of not having 429) -> implement the Axios-Retry with the trick above for new IP ![image](https://user-images.githubusercontent.com/40063990/201315657-66714c72-37bb-4fa3-a401-1806db4773a3.png)
-=> Stil Not guranteed -> Redeploy the lambda via aws-sdk script -> Tried and worked
++ => **Cost Optimization, Fast**, Headless like Puppeteer is not optimized, Premium proxy maybe is too overkill for this technical assignment
++ => ✅✅✅ Lambda Free Tier Approachment is suitable for this workload -> over freetier can consider about EventBridge for CronJob Daily scraping and Thanks To AWS generous IP pool
++ => Rotating Lambda IP -> **Best trick here, we update lambda configuration like Environment** ![image](https://user-images.githubusercontent.com/40063990/201315284-0407defc-8612-445f-aa79-a9e4043fe472.png)
++ => **not guaranteed** 100% percent all the time (approx 80-90% of not having 429) -> implement the Axios-Retry with the trick above for new IP ![image](https://user-images.githubusercontent.com/40063990/201315657-66714c72-37bb-4fa3-a401-1806db4773a3.png)
++ => Stil Not guranteed -> Redeploy the lambda via aws-sdk script -> Tried and worked
 
 ## 5. Screenshot
 + Homepage
