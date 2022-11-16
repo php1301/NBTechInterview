@@ -55,7 +55,8 @@ Leveraged the NextJS api routes mostly and serverless with lambda
 ## 6. Limitations
 + Due to the time limit, the source code maybe not on its best practice (Working on It by actively pushing commit)
 ## 7. Reproduction
-+ run `yarn` and add necessary env variables in `.example.env`
++ run `yarn` and modify DATABASE_url env variables in `.example.env` to .env file
++ run `npx prisma migrate dev --name init` to setup a PostgreSQL tables
 + available routes:
   + homepage: `/`
   + keyword searching in database: '/my-keywords'
