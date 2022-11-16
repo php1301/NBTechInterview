@@ -13,6 +13,7 @@ import { COLUMNS, RESULT_COLUMNS } from "src/constants";
 
 const SearchPage: NextPage = () => {
     const { user, isLoading } = useUser();
+    const [uploading, setUploading] = useState(false);
     const [search, setSearch] = useState([]);
     const [result, setResult] = useState([]);
     const router = useRouter();
@@ -21,7 +22,11 @@ const SearchPage: NextPage = () => {
         router.push("/");
     }
     const resultTable = () => {
-        return (
+        return uploading ? (
+            <p className="text-green-400">
+                LOADING SUCCESS SCRAPING KEYWORDS...
+            </p>
+        ) : (
             <Table className="my-4" columns={RESULT_COLUMNS} data={result} />
         );
     };
@@ -46,12 +51,14 @@ const SearchPage: NextPage = () => {
                     </Button>
                     <Search
                         user={user}
+                        uploading={uploading}
+                        setUploading={setUploading}
                         setSearch={setSearch}
                         setResult={setResult}
                     />
                 </div>
                 <Table columns={COLUMNS} data={search} />
-                {result.length > 0 && resultTable()}
+                {(result.length > 0 || uploading) && resultTable()}
             </div>
         </Container>
     );

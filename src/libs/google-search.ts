@@ -11,12 +11,14 @@ export const getSearchResults = async (searchString: string) => {
                 return retryCount * 2000; // time interval between retries
             },
             retryCondition: (error) => {
+                // return error?.response?.status === 500 || error?.response?.status === 504;
                 return error?.response?.status === 500;
             },
         });
 
         const url =
-            "https://v0vgxe4ad2.execute-api.us-east-1.amazonaws.com/dev/scrapeGoogle";
+            "https://mkszeithdnwbiisviije4yvjua0dicti.lambda-url.us-east-1.on.aws/scrapeGoogle";
+        // "https://v0vgxe4ad2.execute-api.us-east-1.amazonaws.com/dev/scrapeGoogle";
         const { data } = await axios.post(url, {
             kw: searchString,
         });

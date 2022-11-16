@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import axios from "axios";
 import { useForm } from "react-hook-form";
@@ -10,16 +10,19 @@ import { Button } from "@components/button";
 
 interface SearchComponentProps {
     user: UserProfile | undefined;
+    uploading?: boolean;
+    setUploading: (args: boolean) => void;
     setSearch: (...args) => void;
     setResult: (...args) => void;
 }
 
 export const Search: React.FC<SearchComponentProps> = ({
     user,
+    uploading,
+    setUploading,
     setSearch,
     setResult,
 }) => {
-    const [uploading, setUploading] = useState(false);
     const {
         register,
         handleSubmit,
@@ -49,11 +52,11 @@ export const Search: React.FC<SearchComponentProps> = ({
                 const finalizedResult: SearchResponseType =
                     results?.data?.results;
                 console.log(finalizedResult);
+                setUploading(false);
                 setResult(finalizedResult);
             };
 
             reader.readAsText(keywords[0]);
-            setUploading(false);
         } catch (e) {
             setUploading(false);
             console.warn(e);

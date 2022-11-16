@@ -4,9 +4,9 @@ export interface SearchInputType {
 export interface SearchResponseType {
     id: number;
     keyword: string;
-    totalAds: number;
-    totalLinks: number;
-    totalResults: number;
+    totalAds: string;
+    totalLinks: string;
+    totalResults: string;
     htmlLink: string;
     searchTime: string;
 }

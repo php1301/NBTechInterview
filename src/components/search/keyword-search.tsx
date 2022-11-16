@@ -22,7 +22,11 @@ export const KeywordSearch: React.FC<KeywordSearchComponentProps> = ({
         handleSubmit,
         formState: { errors },
     } = useForm<UserUploadSearchInputType>();
-    const onSubmit = async ({ keyword }: UserUploadSearchInputType) => {
+    const onSubmit = async (
+        { keyword }: UserUploadSearchInputType,
+        e?: Event,
+    ) => {
+        e?.preventDefault();
         try {
             setUploading(true);
             const results = await axios.post("/api/user-search", {
@@ -56,15 +60,8 @@ export const KeywordSearch: React.FC<KeywordSearchComponentProps> = ({
                         type="input"
                         id="default-search"
                         className="block my-6 p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Search within your upload"
+                        placeholder="Search within your upload - THIS IS ONBLUR EVENT"
                     />
-                    <Button
-                        type="submit"
-                        disabled={uploading}
-                        className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    >
-                        {uploading ? "Searching..." : "Search"}
-                    </Button>
                 </div>
             </form>
 
